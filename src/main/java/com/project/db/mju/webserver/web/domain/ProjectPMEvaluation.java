@@ -26,7 +26,7 @@ public class ProjectPMEvaluation {
 
     @Column(name = "evaluator", nullable = false)
     private Long evaluator;
-    @Column(name = "evaluator", nullable = false)
+    @Column(name = "evaluated", nullable = false)
     private Long evaluated;
 
     @Column(name = "communication_comment")

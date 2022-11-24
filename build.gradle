@@ -27,6 +27,9 @@ dependencies {
 
 	//Spring JPA implementation
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.7.5'
+
+	// Swagger-UI
+	implementation 'io.springfox:springfox-boot-starter:3.0.0'
 }
 
 tasks.named('test') {

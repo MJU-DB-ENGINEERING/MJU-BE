@@ -167,3 +167,7 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+
+# application.properties for **HIDE DB Information**
+src/main/resources/application.properties

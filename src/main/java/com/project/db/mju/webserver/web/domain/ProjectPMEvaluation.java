@@ -14,7 +14,7 @@ import javax.persistence.*;
 @Entity
 public class ProjectPMEvaluation {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "project_id")
@@ -26,7 +26,7 @@ public class ProjectPMEvaluation {
 
     @Column(name = "evaluator", nullable = false)
     private Long evaluator;
-    @Column(name = "evaluator", nullable = false)
+    @Column(name = "evaluated", nullable = false)
     private Long evaluated;
 
     @Column(name = "communication_comment")

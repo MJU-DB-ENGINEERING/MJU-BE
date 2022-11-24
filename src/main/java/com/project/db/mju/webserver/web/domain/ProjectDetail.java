@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
 @Entity
 public class ProjectDetail {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "project_detail_id")
     private Long projectDetailId;
 

@@ -10,7 +10,6 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ProjectPMEvaluationViewRequestDto {
-    private Long id;
+    private Long projectId;
     private String evaluatorName;
-    private String evaluatedName;
 }

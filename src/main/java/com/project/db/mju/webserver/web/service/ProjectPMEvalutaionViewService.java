@@ -3,6 +3,7 @@ package com.project.db.mju.webserver.web.service;
 import com.project.db.mju.webserver.web.domain.Employee;
 import com.project.db.mju.webserver.web.domain.ProjectPMEvaluation;
 import com.project.db.mju.webserver.web.dto.ProjectPMEvaluationDto;
+import com.project.db.mju.webserver.web.dto.ProjectPMEvaluationViewDto;
 import com.project.db.mju.webserver.web.dto.ProjectPMEvaluationViewRequestDto;
 import com.project.db.mju.webserver.web.repository.ProjectPMEvaluationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,14 +22,14 @@ public class ProjectPMEvalutaionViewService {
     @Autowired
     EmployeeService employeeService;
 
-    public List<ProjectPMEvaluationDto> getAllEvals(ProjectPMEvaluationViewRequestDto requestDto) {
+    public List<ProjectPMEvaluationViewDto> getAllEvals(ProjectPMEvaluationViewRequestDto requestDto) {
         Employee evaluator = employeeService.getByName(requestDto.getEvaluatorName());
 
         Collection<ProjectPMEvaluation> eval = pmEvaluationRepository.getAllPmEvaluations(requestDto.getProjectId(), evaluator.getId());
-        List<ProjectPMEvaluationDto> dtos = new ArrayList<>();
+        List<ProjectPMEvaluationViewDto> dtos = new ArrayList<>();
 
         for (ProjectPMEvaluation c: eval) {
-            dtos.add(new ProjectPMEvaluationDto(
+            dtos.add(new ProjectPMEvaluationViewDto(
                     c.getProjectId(),
                     employeeService.getById(c.getEvaluator()).getName(),
                     employeeService.getById(c.getEvaluated()).getName(),

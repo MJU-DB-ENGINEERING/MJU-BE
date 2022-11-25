@@ -1,6 +1,7 @@
 package com.project.db.mju.webserver.web.controller;
 
 import com.project.db.mju.webserver.web.dto.ProjectPMEvaluationDto;
+import com.project.db.mju.webserver.web.dto.ProjectPMEvaluationViewDto;
 import com.project.db.mju.webserver.web.dto.ProjectPMEvaluationViewRequestDto;
 import com.project.db.mju.webserver.web.service.ProjectPMEvalutaionViewService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,9 +19,9 @@ public class ProjectPMEvalutaionViewController {
     ProjectPMEvalutaionViewService service;
 
     @PostMapping("v1/view/evalutaion")
-    public List<ProjectPMEvaluationDto> viewEvaluation(ProjectPMEvaluationViewRequestDto requestDto) {
+    public List<ProjectPMEvaluationViewDto> viewEvaluation(ProjectPMEvaluationViewRequestDto requestDto) {
 
-        List<ProjectPMEvaluationDto> allEvals = service.getAllEvals(requestDto);
+        List<ProjectPMEvaluationViewDto> allEvals = service.getAllEvals(requestDto);
 
         return allEvals;
     }

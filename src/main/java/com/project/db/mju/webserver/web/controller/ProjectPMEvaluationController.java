@@ -15,7 +15,7 @@ public class ProjectPMEvaluationController {
     @Autowired
     PMEvaluationService pmEvaluationService;
 
-    @PostMapping("v1/evaluation/pm")
+    @RequestMapping("v1/evaluation/pm")
     @ApiOperation(value = "pm 평가를 등록한다.")
     @ApiResponses({
             @ApiResponse(responseCode = "200", description = "정상 응답"),

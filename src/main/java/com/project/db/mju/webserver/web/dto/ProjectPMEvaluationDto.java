@@ -12,8 +12,8 @@ import lombok.Setter;
 public class ProjectPMEvaluationDto {
     private Long projectId;
 
-    private String evaluatorName;
-    private String evaluatedName;
+    private Long evaluator;
+    private Long evaluated;
 
     private String communicationComment;
     private String businessComment;

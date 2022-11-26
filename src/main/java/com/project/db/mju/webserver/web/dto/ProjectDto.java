@@ -39,5 +39,6 @@ public class ProjectDto {
         setStartDate(project.getStartDate());
         setEndDate(project.getEndDate());
         setNote(project.getNote());
+        setCustomerId(project.getCustomerId());
     }
 }

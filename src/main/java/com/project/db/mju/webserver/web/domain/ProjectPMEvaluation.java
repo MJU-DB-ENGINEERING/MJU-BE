@@ -11,7 +11,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Getter
 @Setter
-@Entity
+@Entity(name = "project_pm_evaluation")
 public class ProjectPMEvaluation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -34,6 +34,5 @@ public class ProjectPMEvaluation {
 
     @Column(name = "business_comment")
     private String businessComment;
-
 
 }

@@ -20,4 +20,8 @@ public interface ProjectPMEvaluationRepository extends JpaRepository<ProjectPMEv
 
     @Query(value = "SELECT * FROM project_pm_evaluation WHERE project_pm_evaluation.project_id=:projectId and project_pm_evaluation.evaluator=:evaluator", nativeQuery = true)
     public Collection<ProjectPMEvaluation> getAllPmEvaluations(Long projectId, Long evaluator);
+
+    public ProjectPMEvaluation findProjectPMEvaluationByProjectIdAndEvaluated(Long projectId, Long evaluated);
+
+
 }

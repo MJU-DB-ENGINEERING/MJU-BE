@@ -26,7 +26,7 @@ public class ProjectPMEvaluationController {
         return pmEvaluationService.putProjectPMEvaluation(requestDto);
     }
 
-    @PutMapping("v1/evalutaion/pm/update")
+    @PutMapping("v1/evaluation/pm/update")
     @ApiOperation(value = "존재하는 pm 평가에 대해 값을 업데이트한다")
     @ApiResponses({
             @ApiResponse(responseCode = "200", description = "정상 응답"),
